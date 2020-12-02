@@ -151,7 +151,11 @@ Ts = 10^(-3);
 Ad = expm(A*Ts)
 
 % Discrete B-matrix, constructed using ZOH
-Bd = inv(A)*(Ad-eye(5))*B
+%Bd = inv(A)*(Ad-eye(5))*B
+
+% Using integral, as suggested by Albert
+f = @(t) expm(A*t)*B
+Bd_int = integral(f,0,Ts,'ArrayValued',true)
 
 %% f)
 % Check stability of Ad using eigenvalues. If all eigen values are within
