@@ -25,8 +25,8 @@ PEND_TYPE = 'MEDIUM_12IN';
 %A = zeros(4,4);
 A = [0         0    1.0000         0;
      0         0         0    1.0000;
-     0  128.2092   -7.7744         0;
-     0  528.8277 -4.5648         0];
+     0  0.1*128.2092   -7.7744         0;
+     0  0.1*528.8277 -4.5648         0];
 % 528.8277
 % B
 %B = zeros(4,1);
@@ -57,9 +57,9 @@ Ai = [A zeros(4,1); C(1,:) zeros(1,1)];
 
 Bi = [B; 0];
 
-Ci = [C, zeros(2,1)];
+Ci = [C, zeros(2,1); 0 0 0 0 1];
 
-Di = D;
+Di = [D; 0];
 
 %% DT State-Space
 sysc = ss(A,B,C,D);
@@ -69,10 +69,14 @@ sysi = ss(Ai,Bi,Ci,Di);
 % Set LQR weighting matrices.
 % Qx
 %Qx = zeros(5,5);
-Qx = 1/(20^2)*eye(5);
+%Qx = 1/(20^2)*eye(5); %Simulation
+Qx = diag([500 500 1 1 1]); % Laboration
+%Qx = diag([500 500 0 0 1]); % Laboration 1.4
 % Qu
 %Qu = zeros(1,1);
-Qu = 1/(10^2);
+%Qu = 1/(10^2); % Simulation
+%Qu = 0.2; % Laboration
+Qu = 0.2; % Laboration 1.4
 % Calculate control gain using LQR optimization.
 % K_CT
 K_CT = lqr(Ai,Bi,Qx,Qu);
@@ -82,9 +86,11 @@ K_CT = lqr(Ai,Bi,Qx,Qu);
 % Set Kalman Filter weighting matrices
 % Qw
 %Qw = zeros(2,2);
-Qw = [10 0; 0 10];
+%Qw = [10 0; 0 10]; % Simulation
+Qw = 50*diag([1, 1]); % Laboration
 % Qv
-Qv = [1 0; 0 1];
+%Qv = [1 0; 0 1]; % Simulation
+Qv = 0.0000001*diag([1,1]); % Laboration
 % Nn
 Nn = zeros(2,2);
 %Nn = Qw*Qv.';
@@ -102,3 +108,15 @@ disp( 'SRV02+SIP Setup Succeed!' );
 %
 %%
 % Original initial conditions: pi/180*[-5, 2, 4, 0.3]
+% Laboration init conds:
+init_condi = pi/180*[5, 5, 0, 0];
+% Parameters
+Mp = 0.1270;
+Lr = 0.1270;
+Lp = 0.3111;
+Jr = 0.0083;
+Jp = 0.0012;
+Dr = 0.0690;
+Dp = 0.024*0;
+Co = 0.1285;
+g = 0.981;
