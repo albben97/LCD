@@ -1,4 +1,4 @@
-% Assignment M1
+%% Assignment M1
 beep off; clc; clear all;
 
 % Variables
@@ -188,11 +188,11 @@ syms sigma x real
 
 norm_pdf = 1/(sqrt(2*pi*sigma))*exp(-1/2*(x-mu)^2/sigma);
 
-% Voltage noises
+% Voltage noises, variance
 Phi_v = int(norm_pdf, x, -0.3, 0.3);
 sigma_val_v = double(solve(Phi_v==PoR/100,sigma));
 
-% Torque noises
+% Torque noises, variance
 Phi_T = int(norm_pdf, x, -0.1, 0.1);
 sigma_val_T = double(solve(Phi_T==PoR/100,sigma));
 
@@ -231,43 +231,41 @@ RN = [sigma_val_phi1 0; 0 sigma_val_phi2];
 % Nn
 NN = zeros(2,2);
 
-plant = ss(sysd.a,[sysd.b N],sysd.c,[sysd.d zeros(2)]);
-% Calculate filter gain
-[kalmf,L,P] = kalman(plant,QN,RN,NN);
+% Sample time
+h = 1e-3;
 
-kalm_eig = eig(kalmf.A) ;
+plant = ss(sysd.a,[sysd.b N],sysd.c,[sysd.d zeros(2)], h);
+% Calculate filter gain
+[kalmf,L_CT,P] = kalman(plant,QN,RN,NN);
+L_CT
+kalm_eig = eig(Ad-L_CT*C) 
 
 %% Prefilter
 % d)
 
 Qx = eye(5);
 Qx(1,1) = 1/(1000^2);
-Qx(2,2) = 1/(1000^2);
+Qx(2,2) = 10;
 Qx(3,3) = 1/(1000^2);
-Qx(4,4) = 10;
-Qx(5,5) = 10;
-%Qx(6,6) = 1/(1000^2);
+Qx(4,4) = 1;
+Qx(5,5) = 1;
 % Qu
 %Qu = zeros(1,1);
-Qu = 1/(10^2)*eye(2);   
-K_CT = dlqr(Ad,Bd,Qx,Qu);
+Qu = 100000000*eye(2);   
+K_D = dlqr(Ad,Bd,Qx,Qu);
 
-%% For simulation
-C = C_1;
-D = D_1;
-K_FF = inv(C*inv(eye(5)-Ad+Bd_int*K_CT)*Bd_int)
+% For simulation
 
 % Swapping due to different notations
-K = L;
-L = K_CT;
+K = L_CT;
+L = K_D;
+K_FF = inv(C*inv(eye(5)-Ad+Bd*L)*Bd)
 
-% Sample time
-h = 0.001;
 %Variance = sigma_val_v;
 
 %% Integral 
 clc
-% a)
+%a)
 PoR = 99.7;     % Percentage of Realization
 mu = 0;
 
@@ -275,11 +273,11 @@ syms sigma x real
 
 norm_pdf = 1/(sqrt(2*pi*sigma))*exp(-1/2*(x-mu)^2/sigma);
 
-% Voltage noises
+%Voltage noises
 Phi_v = int(norm_pdf, x, -0.3, 0.3);
 sigma_val_v = double(solve(Phi_v==PoR/100,sigma));
 
-% Torque noises
+%Torque noises
 Phi_T = int(norm_pdf, x, -0.1, 0.1);
 sigma_val_T = double(solve(Phi_T==PoR/100,sigma));
 
@@ -290,14 +288,14 @@ QN = [R1 R12; R12 R2];
 
 N = Bd_int;
 
-% b)
+%b)
 Phi_phi1 = int(norm_pdf, x, -0.02, 0.02);
 sigma_val_phi1 = double(solve(Phi_phi1==PoR/100,sigma));
 
 Phi_phi2 = int(norm_pdf, x, -0.01, 0.01);
 sigma_val_phi2 = double(solve(Phi_phi2==PoR/100,sigma));
 
-% c)
+%c)
 D_1 = [0 0;
             0 0];
 
@@ -307,68 +305,76 @@ D_2 = [1 0;
 C = C_1;
 D = D_1;
 Bd = Bd_int;
-
-Adi = [Ad zeros(5,1); C(1,:) eye(1,1)];
-Bdi = [Bd; 0 0];
-Ci = [C, zeros(2,1)];
+%C(2,:)
+Cia = [1 1]*C;
+Adi = [Ad zeros(5,1); -C(2,:) eye(1)];
+Bdi = [Bd; zeros(1,2)];
+%Ci = [C, zeros(2,1)];
+Ci = [C(2,:), zeros(1,1)]
 %Ci = [0 0 0 0 1 0; 0 0 0 0 0 0]
 Di = D;
 Ni = Bdi;
 
-% DT State-Space
-sysd = ss(Ad,Bd,C,D);
-sysdi = ss(Adi,Bdi,Ci,Di);
+%DT State-Space
+%sysd = ss(Ad,Bd,C,D);
+%sysdi = ss(Adi,Bdi,Ci,Di);
 %sysc = ss(A,B,C,D);
 
-% Set Kalman Filter weighting matrices
+%Set Kalman Filter weighting matrices
 RN = [sigma_val_phi1 0; 0 sigma_val_phi2];
 
-% Nn
+%Nn
 NN = zeros(2,2);
 
-%plantd = ss(sysd.a,[sysd.b N],sysd.c,[sysd.d zeros(2)]);
-plantdi = ss(sysdi.a,[sysdi.b Ni],sysdi.c,[sysdi.d zeros(2)]);
-% Calculate filter gain
-%[kalmf,L_CT,P] = kalman(plantdi,QN,RN,NN);
-%L_CT = [L_CT; 0 0]
+% plantd = ss(sysd.a,[sysd.b N],sysd.c,[sysd.d zeros(2)], h);
+% plantdi = ss(sysdi.a,[sysdi.b Ni],sysdi.c,[sysdi.d zeros(2)], h);
+% %Calculate filter gain
+% [kalmf,L_CT,P] = kalman(plantdi,QN,RN,NN);
+% %L_CT = [L_CT; 0 0]
+% 
+% %kalm_eig = eig(kalmf.A) ;
 
-%kalm_eig = eig(kalmf.A) ;
-
-% d)
+%d)
 %sysdi = ss(Adi,Bdi,Ci,Di);
 
 Qx = eye(6);
 Qx(1,1) = 1/(1000^2);
 Qx(2,2) = 1/(1000^2);
 Qx(3,3) = 1/(1000^2);
-Qx(4,4) = 10;
-Qx(5,5) = 10;
+Qx(4,4) = 100;%/(1000^2);
+Qx(5,5) = 100;%/(1000^2);
 Qx(6,6) = 1/(1000^2);
-% Qu
-%Qu = zeros(1,1);
-Qu = 100000*eye(2);   
+% %Qu
+% %Qu = zeros(1,1);
+Qu = 100*eye(2);
+
+%Qx = diag([1 1 10 0.001 1 0.001]);
+%Qu = diag([2 2])*1e6;
+Qx = diag([1 10 1 1 0.001 0.001]);
+Qu = diag([2 2])*1e6;
+
 Kdi = dlqr(Adi,Bdi,Qx,Qu);
 
-%% For simulation
-A = Adi;
-%Adi = Adi;
-%Bd = Bd;
-%Bdi = Bdi;
-%Ci = Ci;
-C = Ci;
-D = Di;
-B = Bdi;
-%K_FF = inv(C*inv(eye(5)-Ad+Bd_int*K_CT)*Bd_int)
-%K_FF = eye(2);
-% Swapping due to different notations
+%For simulation
+% A = Adi;
+% Adi = Adi;
+% Bd = Bd;
+% Bdi = Bdi;
+% Ci = Ci;
+% C = Ci;
+% D = Di;
+% B = Bdi;
+%K_FF = inv(C*inv(eye(2)-Ad+Bd_int*Kdi)*Bd_int)
+K_FF = eye(2);
+%Swapping due to different notations
 L = Kdi;
-K = [L_CT];
+K = L_CT;
 
-Kfb  = L(:,1:length(Ad));
-Ki = L(:,length(Ad)+1:end)*20;
-K_FF = [Kfb Ki]
+%Kfb  = L(:,1:length(Ad));
+%Ki = L(:,length(Ad)+1:end)*20;
+%K_FF = [Kfb Ki]
 
 %L = [Kfb Ki]
-% Sample time
-h = 0.001;
+
 %Variance = sigma_val_v;
+K_I = [-44; -444]

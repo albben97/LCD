@@ -1,45 +1,52 @@
 Model {
-  Name			  "LQG_2by2_2workspace"
+  Name			  "M3modellSOMFUNKAR2019"
   Version		  10.0
   SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.92"
+    ComputedModelVersion    "1.87"
     NumModelReferences	    0
-    NumTestPointedSignals   5
+    NumTestPointedSignals   6
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "LQG_2by2_2workspace/Control or not?"
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Control or not?"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "LQG_2by2_2workspace/Process disturbances"
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Random Number"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "LQG_2by2_2workspace/Setpoint r"
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Random Number1"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "LQG_2by2_2workspace/Sum1"
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Setpoint r"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "LQG_2by2_2workspace/Unit Delay1"
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Sum1"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      ""
+      FullBlockPath	      "M3modellSOMFUNKAR2019/Unit Delay"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -60,8 +67,9 @@ Model {
   WebScopes_FoundationPlugin "on"
   AnimationPlugin	  "on"
   LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering "28af6e97-c737-44fe-8a66-48e0d2799f9f,dcf386dd-560f-497e-ad6a-f2b3ec5bcb0e,fd78df05-cdec"
-  "-451d-9901-0ccdcfb596af,7459a009-31db-4541-a192-802cfca61ee9,6a789914-2d1b-41a0-b849-1836b63ff61d"
+  LogicAnalyzerSignalOrdering "c674b985-68a9-48ad-8755-6330c9de9e3f,132b132a-59eb-4269-9237-96aa76f05394,aa8030fc-a0bd"
+  "-4224-a17d-a78a186524c0,55d7cc7c-c459-483a-bb1c-a337b4a327d9,e7d90428-d509-4e49-a321-668cc670d116,777044fe-aef5-48a1"
+  "-aa55-6c52ec9cb220"
   DiagnosticSuppressor	  "on"
   NotesPlugin		  "on"
   SLCCPlugin		  "on"
@@ -85,7 +93,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [72.0, 27.0, 1848.0, 1053.0]
+      Location		      [67.0, 27.0, 1853.0, 1053.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -112,10 +120,10 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1810.0, 812.0]
-	  ZoomFactor		  [1.5]
-	  Offset		  [-322.00997023809509, -24.863095238095241]
-	  SceneRectInView	  [-322.00997023809509, -24.863095238095241, 1206.6666666666667, 541.33333333333337]
+	  Extents		  [1815.0, 812.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-253.07142857142867, -126.0]
+	  SceneRectInView	  [-253.07142857142867, -126.0, 1815.0, 812.0]
 	}
 	Object {
 	  $ObjectID		  6
@@ -123,21 +131,21 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "3"
-	  Extents		  [1810.0, 812.0]
+	  Extents		  [1815.0, 821.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-362.0553260655625, -115.0]
-	  SceneRectInView	  [-362.0553260655625, -115.0, 1810.0, 812.0]
+	  Offset		  [-782.7578125, -326.5]
+	  SceneRectInView	  [-782.7578125, -326.5, 1815.0, 821.0]
 	}
 	Object {
 	  $ObjectID		  7
 	  IsActive		  [0]
-	  IsTabbed		  [1]
+	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "16"
-	  Extents		  [1810.0, 812.0]
-	  ZoomFactor		  [1.1522880720180044]
-	  Offset		  [-271.50080951971239, -21.590494791666572]
-	  SceneRectInView	  [-271.50080951971239, -21.590494791666572, 1570.7877604166667, 704.68489583333337]
+	  Extents		  [1815.0, 812.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-541.2578125, -235.0]
+	  SceneRectInView	  [-541.2578125, -235.0, 1815.0, 812.0]
 	}
 	Object {
 	  $ObjectID		  8
@@ -145,41 +153,58 @@ Model {
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "21"
-	  Extents		  [1343.0, 644.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-385.36948051948053, -12.287012987013014]
-	  SceneRectInView	  [-385.36948051948053, -12.287012987013014, 1074.4, 515.2]
+	  Extents		  [1815.0, 812.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-540.0, -329.5]
+	  SceneRectInView	  [-540.0, -329.5, 1815.0, 812.0]
 	}
 	PropName		"EditorsInfo"
       }
-      Object {
-	$PropName		"DockComponentsInfo"
-	$ObjectID		9
-	$ClassName		"Simulink.DockComponentInfo"
-	Type			"GLUE2:PropertyInspector"
-	ID			"Property Inspector"
-	Visible			[0]
-	CreateCallback		""
-	UserData		""
-	Floating		[0]
-	DockPosition		"Right"
-	Width			[640]
-	Height			[480]
-	Minimized		"Unset"
+      Array {
+	Type			"Simulink.DockComponentInfo"
+	Dimension		2
+	Object {
+	  $ObjectID		  9
+	  Type			  "GLUE2:PropertyInspector"
+	  ID			  "Property Inspector"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Right"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  10
+	  Type			  "GLUE2:SpreadSheet"
+	  ID			  "ModelData"
+	  Visible		  [0]
+	  CreateCallback	  "DataView.createSpreadSheetComponent"
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Bottom"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	PropName		"DockComponentsInfo"
       }
-      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
+      WindowState	      "AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAADafwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABiAP///wAAAAEAAAAAAAAAAPwCA"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAA2kAAABiAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAc4AAADaQAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAA"
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAADAAAFbQAAAPb8AQAAAAH7AAAANgBHAEwAVQBFADIAOgBTAHAAcgBlAGEAZABTAGgAZQBlAHQAL"
+      "wBNAG8AZABlAGwARABhAHQAYQAAAAAAAAAFbQAAARYA////AAAHPQAAA2kAAAABAAAAAgAAAAEAAAAC/AAAAAEAAAACAAAAAA=="
       Array {
 	Type			"Cell"
 	Dimension		0
 	PropName		"PersistedApps"
       }
-      WindowUuid	      "f518afd8-306f-4221-988e-48b93fb0b481"
+      WindowUuid	      "e3acf9d6-3e9f-454f-9ba7-e12b638294c5"
     }
-    BDUuid		    "12c712c0-a855-41a4-be02-de5ca8cdc427"
+    BDUuid		    "dc8c30da-556c-4bd7-9306-3dc0f9dfe27e"
   }
   HideAutomaticNames	  on
   Created		  "Mon Nov 26 11:10:27 2007"
@@ -188,9 +213,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "albin"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 15 14:53:02 2020"
-  RTWModifiedTimeStamp	  529941867
-  ModelVersionFormat	  "1.%<AutoIncrement:92>"
+  LastModifiedDate	  "Tue Dec 15 17:39:48 2020"
+  RTWModifiedTimeStamp	  529945457
+  ModelVersionFormat	  "1.%<AutoIncrement:87>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -250,13 +275,13 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    10
+    $ObjectID		    11
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "LQG_2by2_2workspace"
+    model_		    "M3modellSOMFUNKAR2019"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "LQG_2by2_2workspace"
+      Cell		      "M3modellSOMFUNKAR2019"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -268,82 +293,13 @@ Model {
   }
   Object {
     $PropName		    "InstrumentedSignals"
-    $ObjectID		    11
+    $ObjectID		    12
     $ClassName		    "Simulink.HMI.InstrumentedSignals"
     Array {
       Type		      "Struct"
-      Dimension		      5
+      Dimension		      6
       MATStruct {
-	UUID			"28af6e97-c737-44fe-8a66-48e0d2799f9f"
-	BlockPath_		"Sum1"
-	SID_			"27"
-	SubPath_		""
-	OutputPortIndex_	[1.0]
-	LogicalPortIndex_	[0.0]
-	SignalName_		""
-	SubSysPath_		""
-	Decimation_		[1.0]
-	MaxPoints_		[1024.0]
-	TargetBufferedStreaming_ [0.0]
-	IsFrameBased_		[0.0]
-	DomainType_		""
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	  }
-	  PropName		  "DomainParams_"
-	}
-	VisualType_		""
-      }
-      MATStruct {
-	UUID			"dcf386dd-560f-497e-ad6a-f2b3ec5bcb0e"
-	BlockPath_		"Setpoint r"
-	SID_			"21"
-	SubPath_		""
-	OutputPortIndex_	[1.0]
-	LogicalPortIndex_	[0.0]
-	SignalName_		""
-	SubSysPath_		""
-	Decimation_		[1.0]
-	MaxPoints_		[1024.0]
-	TargetBufferedStreaming_ [0.0]
-	IsFrameBased_		[0.0]
-	DomainType_		""
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	  }
-	  PropName		  "DomainParams_"
-	}
-	VisualType_		""
-      }
-      MATStruct {
-	UUID			"fd78df05-cdec-451d-9901-0ccdcfb596af"
-	BlockPath_		"Unit Delay1"
-	SID_			"37"
-	SubPath_		""
-	OutputPortIndex_	[1.0]
-	LogicalPortIndex_	[0.0]
-	SignalName_		""
-	SubSysPath_		""
-	Decimation_		[1.0]
-	MaxPoints_		[1024.0]
-	TargetBufferedStreaming_ [0.0]
-	IsFrameBased_		[0.0]
-	DomainType_		""
-	Array {
-	  Type			  "Struct"
-	  Dimension		  1
-	  MATStruct {
-	  }
-	  PropName		  "DomainParams_"
-	}
-	VisualType_		""
-      }
-      MATStruct {
-	UUID			"7459a009-31db-4541-a192-802cfca61ee9"
+	UUID			"132b132a-59eb-4269-9237-96aa76f05394"
 	BlockPath_		"Control or not?"
 	SID_			"1"
 	SubPath_		""
@@ -366,9 +322,101 @@ Model {
 	VisualType_		""
       }
       MATStruct {
-	UUID			"6a789914-2d1b-41a0-b849-1836b63ff61d"
-	BlockPath_		"Process disturbances"
-	SID_			"16"
+	UUID			"55d7cc7c-c459-483a-bb1c-a337b4a327d9"
+	BlockPath_		"Unit Delay"
+	SID_			"36"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"c674b985-68a9-48ad-8755-6330c9de9e3f"
+	BlockPath_		"Setpoint r"
+	SID_			"21"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"aa8030fc-a0bd-4224-a17d-a78a186524c0"
+	BlockPath_		"Random Number"
+	SID_			"59"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"e7d90428-d509-4e49-a321-668cc670d116"
+	BlockPath_		"Random Number1"
+	SID_			"60"
+	SubPath_		""
+	OutputPortIndex_	[1.0]
+	LogicalPortIndex_	[0.0]
+	SignalName_		""
+	SubSysPath_		""
+	Decimation_		[1.0]
+	MaxPoints_		[1024.0]
+	TargetBufferedStreaming_ [0.0]
+	IsFrameBased_		[0.0]
+	DomainType_		""
+	Array {
+	  Type			  "Struct"
+	  Dimension		  1
+	  MATStruct {
+	  }
+	  PropName		  "DomainParams_"
+	}
+	VisualType_		""
+      }
+      MATStruct {
+	UUID			"777044fe-aef5-48a1-aa55-6c52ec9cb220"
+	BlockPath_		"Sum1"
+	SID_			"27"
 	SubPath_		""
 	OutputPortIndex_	[1.0]
 	LogicalPortIndex_	[0.0]
@@ -419,7 +467,7 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      12
+      $ObjectID		      13
       Version		      "19.1.1"
       DisabledProps	      []
       Description	      ""
@@ -427,13 +475,13 @@ Model {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  13
+	  $ObjectID		  14
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
 	  Components		  []
 	  StartTime		  "0.0"
-	  StopTime		  "300"
+	  StopTime		  "20"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "h"
@@ -470,7 +518,7 @@ Model {
 	  SolverOrder		  3
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  14
+	  $ObjectID		  15
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -512,7 +560,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  15
+	  $ObjectID		  16
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -585,7 +633,7 @@ Model {
 	  EfficientTunableParamExpr off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  16
+	  $ObjectID		  17
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -707,7 +755,7 @@ Model {
 	  ArithmeticOperatorsInVariantConditions "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  17
+	  $ObjectID		  18
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -757,7 +805,7 @@ Model {
 	  HardwareBoardFeatureSet "EmbeddedCoderHSP"
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  18
+	  $ObjectID		  19
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -777,7 +825,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  19
+	  $ObjectID		  20
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  ""
@@ -812,7 +860,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  20
+	  $ObjectID		  21
 	  Version		  "19.1.1"
 	  Array {
 	    Type		    "Cell"
@@ -901,7 +949,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      21
+	      $ObjectID		      22
 	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
@@ -991,7 +1039,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      22
+	      $ObjectID		      23
 	      Version		      "19.1.1"
 	      Array {
 		Type			"Cell"
@@ -1099,7 +1147,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  23
+	  $ObjectID		  24
 	  Version		  "19.1.1"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -1150,11 +1198,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    12
+    $ObjectID		    13
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    24
+    $ObjectID		    25
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1219,12 +1267,6 @@ Model {
     ToolTip		    "on"
   }
   BlockParameterDefaults {
-    Block {
-      BlockType		      Demux
-      Outputs		      "4"
-      DisplayOption	      "none"
-      BusSelectionMode	      off
-    }
     Block {
       BlockType		      DiscreteIntegrator
       IntegratorMethod	      "Integration: Forward Euler"
@@ -1402,8 +1444,8 @@ Model {
     }
   }
   System {
-    Name		    "LQG_2by2_2workspace"
-    Location		    [72, 27, 1920, 1080]
+    Name		    "M3modellSOMFUNKAR2019"
+    Location		    [67, 27, 1920, 1080]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1418,15 +1460,15 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "77"
+    SIDHighWatermark	    "62"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Gain
       Name		      "Control or not?"
       SID		      "1"
-      Position		      [170, 315, 200, 345]
+      Position		      [170, 285, 200, 315]
       ZOrder		      -1
       BlockRotation	      270
       NamePlacement	      "alternate"
@@ -1438,17 +1480,29 @@ Model {
       }
     }
     Block {
-      BlockType		      Demux
-      Name		      "Demux"
-      SID		      "63"
-      Ports		      [1, 5]
-      Position		      [435, 370, 440, 470]
-      ZOrder		      489
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      Outputs		      "5"
-      DisplayOption	      "bar"
+      BlockType		      DiscreteIntegrator
+      Name		      "Discrete-Time\nIntegrator"
+      SID		      "47"
+      Ports		      [1, 1]
+      Position		      [169, 515, 201, 550]
+      ZOrder		      2
+      BlockRotation	      270
+      InitialConditionSetting "Auto"
+      SampleTime	      "-1"
+      ICPrevOutput	      "DiscIntNeverNeededParam"
+      ICPrevScaledInput	      "DiscIntNeverNeededParam"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      SID		      "62"
+      Position		      [170, 445, 200, 475]
+      ZOrder		      10
+      BlockRotation	      270
+      Gain		      "[1 1]"
+      ParamDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      DiscreteStateSpace
@@ -1464,31 +1518,18 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		25
+	$ObjectID		26
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('Bd')"
       }
     }
     Block {
-      BlockType		      DiscreteIntegrator
-      Name		      "Integral"
-      SID		      "64"
-      Ports		      [1, 1]
-      Position		      [355, 466, 385, 494]
-      ZOrder		      490
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      SampleTime	      "-1"
-      ICPrevOutput	      "DiscIntNeverNeededParam"
-      ICPrevScaledInput	      "DiscIntNeverNeededParam"
-    }
-    Block {
       BlockType		      SubSystem
       Name		      "Measurement\nnoise"
       SID		      "3"
       Ports		      [0, 1]
-      Position		      [500, 35, 530, 65]
+      Position		      [595, -10, 625, 20]
       ZOrder		      -3
       BlockRotation	      270
       BlockMirror	      on
@@ -1496,7 +1537,7 @@ Model {
       RequestExecContextInheritance off
       System {
 	Name			"Measurement\nnoise"
-	Location		[72, 27, 1920, 1080]
+	Location		[67, 27, 1920, 1080]
 	Open			on
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1518,7 +1559,7 @@ Model {
 	  Name			  "Mux"
 	  SID			  "4"
 	  Ports			  [2, 1]
-	  Position		  [195, 60, 200, 295]
+	  Position		  [145, 56, 150, 94]
 	  ZOrder		  -1
 	  ShowName		  off
 	  Inputs		  "2"
@@ -1528,9 +1569,9 @@ Model {
 	  BlockType		  RandomNumber
 	  Name			  "noise on y1"
 	  SID			  "5"
-	  Position		  [55, 105, 85, 135]
+	  Position		  [55, 35, 85, 65]
 	  ZOrder		  -2
-	  Variance		  "QN(1,1)"
+	  Variance		  "sigma_val_noise1"
 	  Seed			  "5"
 	  SampleTime		  "h"
 	}
@@ -1538,9 +1579,9 @@ Model {
 	  BlockType		  RandomNumber
 	  Name			  "noise on y2"
 	  SID			  "6"
-	  Position		  [55, 220, 85, 250]
+	  Position		  [55, 85, 85, 115]
 	  ZOrder		  -3
-	  Variance		  "QN(2,2)"
+	  Variance		  "sigma_val_noise2"
 	  Seed			  "4"
 	  SampleTime		  "h"
 	}
@@ -1548,7 +1589,7 @@ Model {
 	  BlockType		  Outport
 	  Name			  "v2"
 	  SID			  "7"
-	  Position		  [265, 173, 295, 187]
+	  Position		  [175, 68, 205, 82]
 	  ZOrder		  -4
 	  IconDisplay		  "Port number"
 	}
@@ -1556,6 +1597,7 @@ Model {
 	  ZOrder		  1
 	  SrcBlock		  "noise on y1"
 	  SrcPort		  1
+	  Points		  [40, 0]
 	  DstBlock		  "Mux"
 	  DstPort		  1
 	}
@@ -1563,6 +1605,7 @@ Model {
 	  ZOrder		  2
 	  SrcBlock		  "noise on y2"
 	  SrcPort		  1
+	  Points		  [40, 0]
 	  DstBlock		  "Mux"
 	  DstPort		  2
 	}
@@ -1574,19 +1617,6 @@ Model {
 	  DstPort		  1
 	}
       }
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux"
-      SID		      "65"
-      Ports		      [6, 1]
-      Position		      [310, 363, 315, 497]
-      ZOrder		      488
-      BlockMirror	      on
-      NamePlacement	      "alternate"
-      ShowName		      off
-      Inputs		      "6"
-      DisplayOption	      "bar"
     }
     Block {
       BlockType		      DiscreteStateSpace
@@ -1603,7 +1633,7 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		26
+	$ObjectID		27
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('Ad')"
@@ -1624,10 +1654,32 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		27
+	$ObjectID		28
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('C')"
+      }
+    }
+    Block {
+      BlockType		      DiscreteStateSpace
+      Name		      "Phi2"
+      SID		      "48"
+      Position		      [168, 385, 202, 420]
+      ZOrder		      3
+      BlockRotation	      270
+      NamePlacement	      "alternate"
+      ShowName		      off
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "-K_I"
+      SampleTime	      "-1"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		29
+	$ClassName		"Simulink.Mask"
+	Type			"Vector gain"
+	Display			"disp('-K_I')"
       }
     }
     Block {
@@ -1645,7 +1697,7 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		28
+	$ObjectID		30
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('Ad')"
@@ -1666,7 +1718,7 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		29
+	$ObjectID		31
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('C')"
@@ -1687,7 +1739,7 @@ Model {
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		30
+	$ObjectID		32
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('Bd')"
@@ -1704,32 +1756,11 @@ Model {
       A			      "[]"
       B			      "[]"
       C			      "[]"
-      D			      "K"
+      D			      "L_CT"
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		31
-	$ClassName		"Simulink.Mask"
-	Type			"Vector gain"
-	Display			"disp('K')"
-      }
-    }
-    Block {
-      BlockType		      DiscreteStateSpace
-      Name		      "Phi7"
-      SID		      "14"
-      Position		      [235, 413, 270, 447]
-      ZOrder		      -10
-      BlockMirror	      on
-      ShowName		      off
-      A			      "[]"
-      B			      "[]"
-      C			      "[]"
-      D			      "L"
-      SampleTime	      "-1"
-      Object {
-	$PropName		"MaskObject"
-	$ObjectID		32
+	$ObjectID		33
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
 	Display			"disp('L')"
@@ -1737,23 +1768,23 @@ Model {
     }
     Block {
       BlockType		      DiscreteStateSpace
-      Name		      "Phi8"
-      SID		      "15"
-      Position		      [100, 412, 135, 448]
-      ZOrder		      -11
-      NamePlacement	      "alternate"
+      Name		      "Phi7"
+      SID		      "53"
+      Position		      [250, 333, 285, 367]
+      ZOrder		      5
+      BlockMirror	      on
       ShowName		      off
       A			      "[]"
       B			      "[]"
       C			      "[]"
-      D			      "K_FF"
+      D			      "-K_fb"
       SampleTime	      "-1"
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		33
+	$ObjectID		34
 	$ClassName		"Simulink.Mask"
 	Type			"Vector gain"
-	Display			"disp('K_FF')"
+	Display			"disp('-K_fb')"
       }
     }
     Block {
@@ -1761,177 +1792,15 @@ Model {
       Name		      "Process\ndisturbances"
       SID		      "16"
       Ports		      [0, 1]
-      Position		      [299, 35, 331, 65]
+      Position		      [299, -10, 331, 20]
       ZOrder		      -12
       BlockRotation	      270
       BlockMirror	      on
       NamePlacement	      "alternate"
       RequestExecContextInheritance off
-      Port {
-	PortNumber		1
-      }
       System {
 	Name			"Process\ndisturbances"
-	Location		[72, 27, 1920, 1080]
-	Open			on
-	PortBlocksUseCompactNotation off
-	SetExecutionDomain	off
-	ExecutionDomainType	"Deduce"
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"115"
-	SimulinkSubDomain	"Simulink"
-	Block {
-	  BlockType		  Mux
-	  Name			  "Mux"
-	  SID			  "17"
-	  Ports			  [5, 1]
-	  Position		  [150, 81, 155, 419]
-	  ZOrder		  -1
-	  ShowName		  off
-	  Inputs		  "5"
-	  DisplayOption		  "bar"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x1"
-	  SID			  "18"
-	  Position		  [65, 90, 95, 120]
-	  ZOrder		  -2
-	  Variance		  "0"
-	  Seed			  "3"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x2"
-	  SID			  "19"
-	  Position		  [65, 155, 95, 185]
-	  ZOrder		  -3
-	  Variance		  "0"
-	  Seed			  "2"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x3"
-	  SID			  "43"
-	  Position		  [65, 285, 95, 315]
-	  ZOrder		  2
-	  Variance		  "0"
-	  Seed			  "3"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x4"
-	  SID			  "44"
-	  Position		  [65, 220, 95, 250]
-	  ZOrder		  1
-	  Variance		  "0"
-	  Seed			  "2"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x5"
-	  SID			  "45"
-	  Position		  [65, 350, 95, 380]
-	  ZOrder		  3
-	  Variance		  "RN(1,1)"
-	  Seed			  "2"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  RandomNumber
-	  Name			  "noise on x6"
-	  SID			  "66"
-	  Position		  [65, 430, 95, 460]
-	  ZOrder		  6
-	  Variance		  "RN(2,2)"
-	  Seed			  "2"
-	  SampleTime		  "h"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "v1"
-	  SID			  "20"
-	  Position		  [220, 228, 250, 242]
-	  ZOrder		  -4
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "noise on x1"
-	  SrcPort		  1
-	  Points		  [29, 0; 0, 15]
-	  DstBlock		  "Mux"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  11
-	  SrcBlock		  "noise on x2"
-	  SrcPort		  1
-	  Points		  [23, 0; 0, 15]
-	  DstBlock		  "Mux"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  3
-	  SrcBlock		  "Mux"
-	  SrcPort		  1
-	  Points		  [28, 0; 0, -15]
-	  DstBlock		  "v1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  12
-	  SrcBlock		  "noise on x4"
-	  SrcPort		  1
-	  Points		  [18, 0; 0, 15]
-	  DstBlock		  "Mux"
-	  DstPort		  3
-	}
-	Line {
-	  ZOrder		  7
-	  SrcBlock		  "noise on x3"
-	  SrcPort		  1
-	  Points		  [12, 0; 0, 15]
-	  DstBlock		  "Mux"
-	  DstPort		  4
-	}
-	Line {
-	  ZOrder		  17
-	  SrcBlock		  "noise on x5"
-	  SrcPort		  1
-	  Points		  [26, 0; 0, 15]
-	  DstBlock		  "Mux"
-	  DstPort		  5
-	}
-      }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Setpoint r"
-      SID		      "21"
-      Ports		      [0, 1]
-      Position		      [0, 412, 35, 448]
-      ZOrder		      -13
-      RequestExecContextInheritance off
-      Port {
-	PortNumber		1
-      }
-      System {
-	Name			"Setpoint r"
-	Location		[136, 57, 1517, 942]
+	Location		[67, 27, 1920, 1080]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -1946,15 +1815,194 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"100"
+	SimulinkSubDomain	"Simulink"
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "17"
+	  Ports			  [5, 1]
+	  Position		  [145, 60, 150, 130]
+	  ZOrder		  -1
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "noise on x1"
+	  SID			  "18"
+	  Position		  [75, 35, 105, 65]
+	  ZOrder		  -2
+	  Variance		  "R1(1,1)"
+	  Seed			  "3"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "noise on x2"
+	  SID			  "19"
+	  Position		  [75, 85, 105, 115]
+	  ZOrder		  -3
+	  Variance		  "R1"
+	  Seed			  "2"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "noise on x3"
+	  SID			  "43"
+	  Position		  [75, 150, 105, 180]
+	  ZOrder		  1
+	  Variance		  "R1"
+	  Seed			  "2"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "noise on x4"
+	  SID			  "44"
+	  Position		  [75, 205, 105, 235]
+	  ZOrder		  2
+	  Variance		  "R1"
+	  Seed			  "2"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "noise on x5"
+	  SID			  "45"
+	  Position		  [75, 260, 105, 290]
+	  ZOrder		  3
+	  Variance		  "R1"
+	  Seed			  "2"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v1"
+	  SID			  "20"
+	  Position		  [175, 68, 205, 82]
+	  ZOrder		  -4
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "noise on x1"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 15]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "noise on x2"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  DstBlock		  "v1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "noise on x3"
+	  SrcPort		  1
+	  Points		  [11, 0; 0, -54; -8, 0; 0, -16]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  5
+	  SrcBlock		  "noise on x4"
+	  SrcPort		  1
+	  Points		  [28, 0; 0, -110]
+	  DstBlock		  "Mux"
+	  DstPort		  4
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "noise on x5"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  5
+	}
+      }
+    }
+    Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber"
+      SID		      "59"
+      Position		      [175, -20, 205, 10]
+      ZOrder		      8
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Variance		      "[sigma_val_v sigma_val_T]"
+      SampleTime	      "h"
+      Port {
+	PortNumber		1
+      }
+    }
+    Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber1"
+      SID		      "60"
+      Position		      [500, -60, 530, -30]
+      ZOrder		      9
+      BlockRotation	      270
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Variance		      "[sigma_val_noise1 sigma_val_noise2]"
+      SampleTime	      "h"
+      Port {
+	PortNumber		1
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Setpoint r"
+      SID		      "21"
+      Ports		      [0, 1]
+      Position		      [60, 567, 95, 603]
+      ZOrder		      -13
+      RequestExecContextInheritance off
+      Port {
+	PortNumber		1
+      }
+      System {
+	Name			"Setpoint r"
+	Location		[67, 27, 1920, 1080]
+	Open			off
+	PortBlocksUseCompactNotation off
+	SetExecutionDomain	off
+	ExecutionDomainType	"Deduce"
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  DiscreteIntegrator
 	  Name			  "Discrete-Time\nIntegrator"
-	  SID			  "69"
+	  SID			  "61"
 	  Ports			  [1, 1]
-	  Position		  [-60, 107, -25, 143]
-	  ZOrder		  5
+	  Position		  [-5, -136, 30, -104]
+	  ZOrder		  7
 	  InitialConditionSetting "Auto"
 	  SampleTime		  "-1"
 	  ICPrevOutput		  "DiscIntNeverNeededParam"
@@ -1964,9 +2012,20 @@ Model {
 	  BlockType		  Mux
 	  Name			  "Mux"
 	  SID			  "22"
-	  Ports			  [2, 1]
-	  Position		  [140, 51, 145, 369]
+	  Ports			  [5, 1]
+	  Position		  [-135, -59, -130, 139]
 	  ZOrder		  -1
+	  ShowName		  off
+	  Inputs		  "5"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "54"
+	  Ports			  [2, 1]
+	  Position		  [75, -169, 80, 29]
+	  ZOrder		  4
 	  ShowName		  off
 	  Inputs		  "2"
 	  DisplayOption		  "bar"
@@ -1976,7 +2035,7 @@ Model {
 	  Name			  "To Workspace2"
 	  SID			  "23"
 	  Ports			  [1]
-	  Position		  [240, 173, 275, 187]
+	  Position		  [190, 33, 225, 47]
 	  ZOrder		  -2
 	  BackgroundColor	  "lightBlue"
 	  ShowName		  off
@@ -1986,11 +2045,62 @@ Model {
 	}
 	Block {
 	  BlockType		  Step
+	  Name			  "r1"
+	  SID			  "24"
+	  Position		  [-335, 225, -305, 255]
+	  ZOrder		  -3
+	  Time			  "0"
+	  After			  "0"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Step
 	  Name			  "r2"
 	  SID			  "25"
-	  Position		  [-145, 170, -115, 200]
+	  Position		  [-335, 275, -305, 305]
 	  ZOrder		  -4
 	  Time			  "5"
+	  Before		  "10"
+	  After			  "100"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "r3"
+	  SID			  "49"
+	  Position		  [-335, 175, -305, 205]
+	  ZOrder		  1
+	  Time			  "0"
+	  After			  "0"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "r4"
+	  SID			  "50"
+	  Position		  [-350, -15, -320, 15]
+	  ZOrder		  2
+	  Time			  "0"
+	  After			  "0"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "r5"
+	  SID			  "51"
+	  Position		  [-430, -55, -400, -25]
+	  ZOrder		  3
+	  Time			  "0"
+	  After			  "0"
+	  SampleTime		  "h"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "r6"
+	  SID			  "55"
+	  Position		  [-200, -120, -170, -90]
+	  ZOrder		  5
+	  Time			  "0.5"
 	  Before		  "10"
 	  After			  "100"
 	  SampleTime		  "h"
@@ -1999,68 +2109,91 @@ Model {
 	  BlockType		  Outport
 	  Name			  "r"
 	  SID			  "26"
-	  Position		  [240, 203, 270, 217]
+	  Position		  [190, 63, 220, 77]
 	  ZOrder		  -5
 	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "r1"
+	  SrcPort		  1
+	  Points		  [77, 0; 0, -160]
+	  DstBlock		  "Mux"
+	  DstPort		  4
 	}
 	Line {
 	  ZOrder		  2
 	  SrcBlock		  "r2"
 	  SrcPort		  1
-	  Points		  [36, 0]
-	  Branch {
-	    ZOrder		    14
-	    Points		    [0, -60]
-	    DstBlock		    "Discrete-Time\nIntegrator"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    13
-	    Points		    [87, 0; 0, 105]
-	    DstBlock		    "Mux"
-	    DstPort		    2
-	  }
+	  Points		  [126, 0; 0, -170]
+	  DstBlock		  "Mux"
+	  DstPort		  5
 	}
 	Line {
-	  ZOrder		  3
-	  SrcBlock		  "Mux"
+	  ZOrder		  9
+	  SrcBlock		  "r3"
 	  SrcPort		  1
-	  Points		  [65, 0]
+	  Points		  [10, 0; 0, -150]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "r4"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "r5"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "r6"
+	  SrcPort		  1
+	  Points		  [115, 0]
 	  Branch {
-	    ZOrder		    4
-	    DstBlock		    "r"
-	    DstPort		    1
+	    ZOrder		    23
+	    Points		    [0, 85]
+	    DstBlock		    "Mux1"
+	    DstPort		    2
 	  }
 	  Branch {
-	    ZOrder		    5
-	    Points		    [0, -30]
-	    DstBlock		    "To Workspace2"
+	    ZOrder		    22
+	    Points		    [0, -15]
+	    DstBlock		    "Discrete-Time\nIntegrator"
 	    DstPort		    1
 	  }
 	}
 	Line {
 	  ZOrder		  15
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, 110]
+	  Branch {
+	    ZOrder		    17
+	    Points		    [0, 30]
+	    DstBlock		    "r"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    16
+	    DstBlock		    "To Workspace2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  20
 	  SrcBlock		  "Discrete-Time\nIntegrator"
 	  SrcPort		  1
-	  Points		  [78, 0; 0, 5]
-	  DstBlock		  "Mux"
+	  DstBlock		  "Mux1"
 	  DstPort		  1
 	}
       }
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      "71"
-      Ports		      [2, 1]
-      Position		      [55, 420, 75, 440]
-      ZOrder		      494
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|+-"
-      InputSameDT	      off
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SaturateOnIntegerOverflow	off
     }
     Block {
       BlockType		      Sum
@@ -2083,12 +2216,13 @@ Model {
       BlockType		      Sum
       Name		      "Sum2"
       SID		      "28"
-      Ports		      [3, 1]
+      Ports		      [2, 1]
       Position		      [300, 95, 330, 125]
       ZOrder		      -15
+      BlockRotation	      270
       ShowName		      off
       IconShape		      "round"
-      Inputs		      "+|+|+"
+      Inputs		      "++|"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -2125,14 +2259,43 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum5"
-      SID		      "31"
+      SID		      "57"
       Ports		      [2, 1]
-      Position		      [175, 420, 195, 440]
-      ZOrder		      -18
+      Position		      [175, 340, 195, 360]
+      ZOrder		      6
       BlockRotation	      270
       ShowName		      off
       IconShape		      "round"
-      Inputs		      "+|-"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum6"
+      SID		      "52"
+      Ports		      [2, 1]
+      Position		      [175, 575, 195, 595]
+      ZOrder		      4
+      BlockRotation	      270
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "+-|"
+      InputSameDT	      off
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum7"
+      SID		      "58"
+      Ports		      [2, 1]
+      Position		      [175, 95, 205, 125]
+      ZOrder		      7
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
       InputSameDT	      off
       OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
@@ -2181,7 +2344,7 @@ Model {
       Name		      "To Workspace3"
       SID		      "35"
       Ports		      [1]
-      Position		      [130, 103, 165, 117]
+      Position		      [40, 103, 80, 117]
       ZOrder		      -22
       BlockMirror	      on
       BackgroundColor	      "lightBlue"
@@ -2200,6 +2363,9 @@ Model {
       ShowName		      off
       SampleTime	      "-1"
       HasFrameUpgradeWarning  on
+      Port {
+	PortNumber		1
+      }
     }
     Block {
       BlockType		      UnitDelay
@@ -2210,14 +2376,12 @@ Model {
       ShowName		      off
       SampleTime	      "-1"
       HasFrameUpgradeWarning  on
-      Port {
-	PortNumber		1
-      }
     }
     Line {
       ZOrder		      1
       SrcBlock		      "Sum2"
       SrcPort		      1
+      Points		      [0, -19; 25, 0]
       DstBlock		      "Unit Delay"
       DstPort		      1
     }
@@ -2261,8 +2425,17 @@ Model {
       Branch {
 	ZOrder			9
 	Points			[0, 145]
-	DstBlock		"Sum4"
-	DstPort			2
+	Branch {
+	  ZOrder		  69
+	  Points		  [0, 364; -360, 0]
+	  DstBlock		  "Sum6"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  68
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
       }
       Branch {
 	ZOrder			10
@@ -2271,26 +2444,12 @@ Model {
       }
     }
     Line {
-      ZOrder		      11
-      SrcBlock		      "Measurement\nnoise"
-      SrcPort		      1
-      DstBlock		      "Sum1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      13
-      SrcBlock		      "Gamma"
-      SrcPort		      1
-      DstBlock		      "Sum2"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      14
+      ZOrder		      79
       SrcBlock		      "Phi"
       SrcPort		      1
       Points		      [-35, 0]
       DstBlock		      "Sum2"
-      DstPort		      3
+      DstPort		      2
     }
     Line {
       ZOrder		      15
@@ -2313,9 +2472,9 @@ Model {
 	ZOrder			18
 	Points			[0, 45]
 	Branch {
-	  ZOrder		  50
-	  Points		  [0, 39; 49, 0; 0, 81]
-	  DstBlock		  "Demux"
+	  ZOrder		  64
+	  Points		  [0, 50]
+	  DstBlock		  "Phi7"
 	  DstPort		  1
 	}
 	Branch {
@@ -2369,24 +2528,10 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      27
-      SrcBlock		      "Phi7"
-      SrcPort		      1
-      DstBlock		      "Sum5"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      28
-      SrcBlock		      "Sum5"
-      SrcPort		      1
-      DstBlock		      "Control or not?"
-      DstPort		      1
-    }
-    Line {
       ZOrder		      31
       SrcBlock		      "Control or not?"
       SrcPort		      1
-      Points		      [0, -55]
+      Points		      [0, -25]
       Branch {
 	ZOrder			32
 	DstBlock		"Phi5"
@@ -2394,98 +2539,94 @@ Model {
       }
       Branch {
 	ZOrder			33
-	Points			[0, -145]
+	Points			[-67, 0; 0, -145]
 	Branch {
-	  ZOrder		  34
-	  DstBlock		  "Gamma"
-	  DstPort		  1
+	  ZOrder		  81
+	  DstBlock		  "Sum7"
+	  DstPort		  2
 	}
 	Branch {
-	  ZOrder		  35
+	  ZOrder		  80
 	  DstBlock		  "To Workspace3"
 	  DstPort		  1
 	}
       }
     }
     Line {
-      ZOrder		      41
-      SrcBlock		      "Demux"
-      SrcPort		      2
-      DstBlock		      "Mux"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      45
-      SrcBlock		      "Demux"
+      ZOrder		      62
+      SrcBlock		      "Discrete-Time\nIntegrator"
       SrcPort		      1
-      DstBlock		      "Mux"
+      DstBlock		      "Gain"
       DstPort		      1
     }
     Line {
-      ZOrder		      46
-      SrcBlock		      "Demux"
-      SrcPort		      3
-      DstBlock		      "Mux"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      48
-      SrcBlock		      "Demux"
-      SrcPort		      4
-      DstBlock		      "Mux"
-      DstPort		      4
-    }
-    Line {
-      ZOrder		      51
-      SrcBlock		      "Integral"
+      ZOrder		      67
+      SrcBlock		      "Setpoint r"
       SrcPort		      1
-      DstBlock		      "Mux"
-      DstPort		      6
-    }
-    Line {
-      ZOrder		      52
-      SrcBlock		      "Demux"
-      SrcPort		      5
-      Points		      [-4, 0]
-      Branch {
-	ZOrder			54
-	Points			[0, 20]
-	DstBlock		"Integral"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			53
-	Points			[-10, 0; 0, -14; -86, 0]
-	DstBlock		"Mux"
-	DstPort			5
-      }
-    }
-    Line {
-      ZOrder		      55
-      SrcBlock		      "Mux"
-      SrcPort		      1
-      DstBlock		      "Phi7"
+      DstBlock		      "Sum6"
       DstPort		      1
     }
     Line {
-      ZOrder		      65
-      SrcBlock		      "Phi8"
+      ZOrder		      86
+      SrcBlock		      "Sum6"
+      SrcPort		      1
+      DstBlock		      "Discrete-Time\nIntegrator"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      74
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      DstBlock		      "Control or not?"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      75
+      SrcBlock		      "Phi2"
       SrcPort		      1
       DstBlock		      "Sum5"
       DstPort		      1
     }
     Line {
-      ZOrder		      71
-      SrcBlock		      "Setpoint r"
+      ZOrder		      76
+      SrcBlock		      "Phi7"
       SrcPort		      1
-      DstBlock		      "Sum"
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      77
+      SrcBlock		      "Gamma"
+      SrcPort		      1
+      DstBlock		      "Sum2"
       DstPort		      1
     }
     Line {
-      ZOrder		      72
-      SrcBlock		      "Sum"
+      ZOrder		      83
+      SrcBlock		      "Sum7"
       SrcPort		      1
-      DstBlock		      "Phi8"
+      DstBlock		      "Gamma"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      84
+      SrcBlock		      "Random\nNumber"
+      SrcPort		      1
+      DstBlock		      "Sum7"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      85
+      SrcBlock		      "Random\nNumber1"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      87
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "Phi2"
       DstPort		      1
     }
     Annotation {
@@ -2512,7 +2653,7 @@ Model {
     Annotation {
       SID		      "41"
       Name		      "LQ FEEDBACK"
-      Position		      [199, 392, 270, 407]
+      Position		      [214, 459, 285, 474]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -4
     }
